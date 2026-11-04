@@ -27,7 +27,7 @@ else's channel.
 | | |
 |---|---|
 | **Endpoint subscriptions** | Each consumer team marks the endpoints it depends on. The provider team doesn't have to keep a list. |
-| **Breaking-change alerts** | Sent to Slack, Microsoft Teams or email, whichever channel each team picks. Only to the teams subscribed to the endpoint that changed. |
+| **Breaking-change alerts** | Sent to Slack, Microsoft Teams or email, whichever channel each team picks. Only to the teams subscribed to the endpoint that changed, and to anyone who follows it personally (by email). |
 | **Service Graph** | A team-level map of who consumes and who owns every endpoint, across all your services. |
 | **API Changes and Impact Analysis** | Every pull request's changes as one change set, with an impact score that shows its working, and which teams are left out and why. |
 | **Discovery** | Suggests teams that may be affected by an endpoint nobody has mapped yet, and shows the signals behind each suggestion. |
