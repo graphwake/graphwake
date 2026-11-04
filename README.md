@@ -35,6 +35,7 @@ else's channel.
 | **Teams and Ownership** | Teams, people and endpoint owners in one place, with a Monday report of the endpoints that have no consumer or no owner. |
 | **Overview** | What needs attention across the workspace, at a glance. |
 | **⌘K search** | Jump to any endpoint, service or team from anywhere in the app. |
+| **Graphwake MCP** `Pro` | Ask your own AI assistant who consumes an endpoint, who owns it, and who a local spec change would break, without leaving your editor. |
 | **CI agent** | One step in your pipeline sends the spec on every pull request and merge. It never fails your build. [graphwake/agent](https://github.com/graphwake/agent) |
 
 <br>
@@ -96,6 +97,26 @@ before it merges:
 
 It runs on GitHub Actions, GitLab CI, Azure DevOps, Bitbucket Pipelines and Jenkins, or anywhere as a Docker image or a
 binary for Linux, macOS and Windows. Every run shows up on the CI/CD page of the app.
+
+</details>
+
+<details>
+<summary><b>Graphwake MCP: ask your AI assistant who breaks</b></summary>
+<br>
+
+Graphwake MCP is a remote MCP server at `https://api.graphwake.com/mcp`. Your own AI assistant asks it about your
+service graph, and Graphwake answers with data. Graphwake has no AI model of its own and never sees your code.
+
+- **Read the graph.** A team's dependencies, an endpoint's owner and consumers, recent changes, impact, history,
+  Discovery suggestions and the workspace overview.
+- **Dry-run a local spec.** Check an edited OpenAPI file against the live one and see which teams it would break.
+  Nothing is stored and nobody is alerted. Only the spec file is sent, and it is discarded after the comparison.
+- **Act, if you allow it.** A "Read and write" key can subscribe a team to an endpoint and decide a Discovery
+  suggestion, under the same permission rules as the dashboard. Keys are "Read only" by default.
+- **Admin stays in the app.** People, billing, SSO, ownership changes and unsubscribing are not reachable from MCP.
+
+Create an MCP key under Settings → AI assistants (MCP). It works with Claude Code, Cursor, GitHub Copilot and other
+clients that accept an API key. Available on Pro, Enterprise and during the trial.
 
 </details>
 
