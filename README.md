@@ -127,7 +127,6 @@ clients that accept an API key. Available on Pro, Enterprise and during the tria
 - Single sign-on with Microsoft Entra ID, verified company domains and invites.
 - Your workspace on its own subdomain, if you want one.
 - Each workspace's data is isolated with row-level security in the database.
-- Data is stored in the EU (Frankfurt, eu-central-1).
 - Graphwake reads your OpenAPI specs, not your code.
 
 </details>
