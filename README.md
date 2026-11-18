@@ -36,7 +36,7 @@ else's channel.
 | **Overview** | What needs attention across the workspace, at a glance. |
 | **⌘K search** | Jump to any endpoint, service or team from anywhere in the app. |
 | **Graphwake MCP** `Pro` | Ask your own AI assistant who consumes an endpoint, who owns it, and who a local spec change would break, without leaving your editor. |
-| **CI agent** | One step in your pipeline sends the spec on every pull request and merge. It never fails your build. [graphwake/agent](https://github.com/graphwake/agent) |
+| **CI agent** | One step in your pipeline sends the spec on every pull request and merge. On GitHub and Azure DevOps it comments on the pull request with the breaking changes and the teams they affect. It never fails your build unless you ask it to with `--fail-on`. [graphwake/agent](https://github.com/graphwake/agent) |
 
 <br>
 
@@ -84,19 +84,21 @@ before it merges:
 
 | Build | What happens |
 |---|---|
-| Pull request | The spec is stored as a draft. Subscribed teams hear about breaking changes before they ship. |
+| Pull request | The spec is stored as a draft. Subscribed teams hear about breaking changes before they ship. On GitHub and Azure DevOps the pull request gets a comment with the breaking changes and the affected teams. |
 | Default branch, after the merge | The spec becomes the live spec and the real notifications go out. |
 | Anything else | Nothing is sent. |
 
 ```yaml
-- uses: graphwake/agent/github-action@v0.1.0
+- uses: graphwake/agent/github-action@v0.2.0
   with:
     spec: openapi.json
     key: ${{ secrets.GRAPHWAKE_KEY }}
 ```
 
 It runs on GitHub Actions, GitLab CI, Azure DevOps, Bitbucket Pipelines and Jenkins, or anywhere as a Docker image or a
-binary for Linux, macOS and Windows. Every run shows up on the CI/CD page of the app.
+binary for Linux, macOS and Windows. Every run shows up on the CI/CD page of the app. For the pull request comment on
+GitHub, give the workflow `pull-requests: write`; add `fail-on: affected` to fail a pull request that breaks a subscribed
+team (the label `graphwake-accept-breaking` lets an intended change pass).
 
 </details>
 
