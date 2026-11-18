@@ -143,5 +143,7 @@ clients that accept an API key. Available on Pro, Enterprise and during the tria
 
 ## Try it
 
+Want to check one change first? The [free OpenAPI diff](https://graphwake.com/tools/openapi-diff) compares two specs in your browser and shows every breaking change. Your specs are never uploaded.
+
 Every workspace starts with a 7-day trial of every feature, no credit card needed.
 [Start at graphwake.com](https://graphwake.com).
