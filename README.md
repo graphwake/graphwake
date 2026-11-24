@@ -27,7 +27,7 @@ else's channel.
 | | |
 |---|---|
 | **Endpoint subscriptions** | Each consumer team marks the endpoints it depends on. The provider team doesn't have to keep a list. |
-| **Breaking-change alerts** | Sent to Slack, Microsoft Teams or email, whichever channel each team picks. Only to the teams subscribed to the endpoint that changed, and to anyone who follows it personally (by email). |
+| **Breaking-change alerts** | Sent to Slack, Microsoft Teams or email, whichever channel each team picks. Only to the teams subscribed to the endpoint that changed, and to anyone who follows it personally (by email). Pro and Enterprise teams can also send their alerts to their own tools with signed webhooks. |
 | **Deprecation and sunset reminders** | When an endpoint is marked deprecated in the spec, the teams that use it hear about it, with reminders 30, 7 and 1 day before its sunset date. On Pro and Enterprise, after the sunset date the owner sees which teams still call it, from Usage Discovery. |
 | **Service Graph** | A team-level map of who consumes and who owns every endpoint, across all your services. |
 | **API Changes and Impact Analysis** | Every pull request's changes as one change set, with an impact score that shows its working, and which teams are left out and why. |
