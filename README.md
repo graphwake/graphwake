@@ -75,7 +75,8 @@ Setting up a channel? Send a test alert first and see exactly what your team wil
 <summary><b>How your spec reaches Graphwake</b></summary>
 <br>
 
-Graphwake only needs your OpenAPI spec. It never asks for access to your source code.
+Graphwake only needs your OpenAPI spec. It never asks for access to your source code. Graphwake watches OpenAPI 3.x
+and Swagger 2.0 specs. Swagger 2.0 is converted to OpenAPI 3.0 when it arrives; nothing to do on your side.
 
 **Give it the spec URL.** Graphwake checks a published OpenAPI spec every 30 minutes by default. Protected URLs work
 with an auth header.
@@ -112,7 +113,7 @@ service graph, and Graphwake answers with data. Graphwake has no AI model of its
 
 - **Read the graph.** A team's dependencies, an endpoint's owner and consumers, recent changes, impact, history,
   Discovery suggestions and the workspace overview.
-- **Dry-run a local spec.** Check an edited OpenAPI file against the live one and see which teams it would break.
+- **Dry-run a local spec.** Check an edited OpenAPI 3.x or Swagger 2.0 file against the live one and see which teams it would break.
   Nothing is stored and nobody is alerted. Only the spec file is sent, and it is discarded after the comparison.
 - **Act, if you allow it.** A "Read and write" key can subscribe a team to an endpoint and decide a Discovery
   suggestion, under the same permission rules as the dashboard. Keys are "Read only" by default.
