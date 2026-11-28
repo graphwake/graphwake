@@ -147,5 +147,5 @@ clients that accept an API key. Available on Pro, Enterprise and during the tria
 
 Want to check one change first? The [free OpenAPI diff](https://graphwake.com/tools/openapi-diff) compares two specs in your browser and shows every breaking change. Your specs are never uploaded.
 
-Every workspace starts with a 14-day trial of every feature, no credit card needed.
+Every workspace starts with a 14-day trial of every feature, no credit card needed. After that it keeps a Free plan (25 endpoints, 3 users) with no time limit, or you choose a paid plan.
 [Start at graphwake.com](https://graphwake.com).
