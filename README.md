@@ -29,6 +29,7 @@ else's channel.
 | **Endpoint subscriptions** | Each consumer team marks the endpoints it depends on. The provider team doesn't have to keep a list. |
 | **Breaking-change alerts** | Sent to Slack, Microsoft Teams or email, whichever channel each team picks. Only to the teams subscribed to the endpoint that changed, and to anyone who follows it personally (by email). Pro and Enterprise teams can also send their alerts to their own tools with signed webhooks. |
 | **Deprecation and sunset reminders** | When an endpoint is marked deprecated in the spec, the teams that use it hear about it, with reminders 30, 7 and 1 day before its sunset date. On Pro and Enterprise, after the sunset date the owner sees which teams still call it, from Usage Discovery. |
+| **Spec quality score** | Every spec gets a 0–100 quality score from security and design rules, with each finding and how to fix it. New findings show up on the pull request, and on Pro the owning team gets a weekly summary in its own channel. |
 | **Service Graph** | A team-level map of who consumes and who owns every endpoint, across all your services. |
 | **API Changes and Impact Analysis** | Every pull request's changes as one change set, with an impact score that shows its working, and which teams are left out and why. |
 | **Discovery** | Suggests teams that may be affected by an endpoint nobody has mapped yet, and shows the signals behind each suggestion. |
@@ -37,7 +38,7 @@ else's channel.
 | **Overview** | What needs attention across the workspace, at a glance. |
 | **⌘K search** | Jump to any endpoint, service or team from anywhere in the app. |
 | **Graphwake MCP** `Pro` | Ask your own AI assistant who consumes an endpoint, who owns it, and who a local spec change would break, without leaving your editor. |
-| **CI agent** | One step in your pipeline sends the spec on every pull request and merge. On GitHub and Azure DevOps it comments on the pull request with the breaking changes and the teams they affect. It never fails your build unless you ask it to with `--fail-on`. [graphwake/agent](https://github.com/graphwake/agent) |
+| **CI agent** | One step in your pipeline sends the spec on every pull request and merge. On GitHub and Azure DevOps it comments on the pull request with the breaking changes and the teams they affect. With `--sarif` it also writes the spec findings to a SARIF file for GitHub code scanning. It never fails your build unless you ask it to with `--fail-on`. [graphwake/agent](https://github.com/graphwake/agent) |
 
 <br>
 
